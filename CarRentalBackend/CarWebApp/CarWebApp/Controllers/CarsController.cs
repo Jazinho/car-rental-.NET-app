@@ -49,7 +49,7 @@ namespace CarWebApp.Controllers
                 return BadRequest(ModelState);
             }
             db.Create(car);
-            return (IHttpActionResult) db.Get(car.Id);
+            return Created(car); //(IHttpActionResult) db.Get(car.Id);
         }
 
         public async Task<IHttpActionResult> Put([FromODataUri] int key, Car update)
@@ -62,15 +62,15 @@ namespace CarWebApp.Controllers
             {
                 return BadRequest();
             }
-            db.Update(update);
             //db.Entry(update).State = EntityState.Modified;
+            db.Update(update);
             try
             {
-             //   await db.SaveChangesAsync();
+                //await db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!CarExists(key))
+                if (!db.CarExists(key))
                 {
                     return NotFound();
                 }
@@ -96,12 +96,13 @@ namespace CarWebApp.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-
+        /*
         private bool CarExists(int key)
         {
             //return db.Cars.Any(p => p.Id == key);
+            //funkcja w repo by się przydała
             if (db.Get(key) == null) return false; else return true;
-        }
+        }*/
         protected override void Dispose(bool disposing)
         {
             CarContext db = new CarContext(); //UWAGA!!!

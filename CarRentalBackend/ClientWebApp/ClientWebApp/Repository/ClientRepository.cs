@@ -12,7 +12,7 @@ namespace ClientWebApp.Repository
         //  static string currentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         //  static string parentPath = Path.GetFullPath(Path.Combine(currentPath, "..\\..\\.."));
         //  private readonly string ClientConnection = parentPath + @"\clients.db";
-        private readonly string ClientConnection = @"??????????????????\clients.db";
+        private readonly string ClientConnection = @"C:\tmp\clients.db";
         public List<Client> GetAll()
         {
             using (var db = new LiteDatabase(ClientConnection))
@@ -76,14 +76,14 @@ namespace ClientWebApp.Repository
             if (ClientDB == null)
                 return null;
             Client Client = new Client() { Id = ClientDB.Id, Name = ClientDB.Name, Surname = ClientDB.Surname };
-            String[] str = ClientDB.RentingHistory.Split('#');
-            foreach (var num in str)
-            {
-                if (!num.Equals(""))
-                {
-                    Client.RentingHistory.Add(int.Parse(num));
-                }
-            }
+            /* String[] str = ClientDB.RentingHistory.Split('#'); //NullPointer
+             foreach (var num in str)
+             {
+                 if (!num.Equals(""))
+                 {
+                     Client.RentingHistory.Add(int.Parse(num));
+                 }
+             }*/
             return Client;
         }
 

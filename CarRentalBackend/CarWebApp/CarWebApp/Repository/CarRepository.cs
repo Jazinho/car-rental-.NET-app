@@ -43,5 +43,10 @@ namespace CarWebApp.Repository
             db.Cars.Remove(Deleted);
             db.SaveChanges();
         }
+
+        public bool CarExists(int key)
+        {
+            return db.Cars.Any(p => p.Id == key);
+        }
     }
 }
