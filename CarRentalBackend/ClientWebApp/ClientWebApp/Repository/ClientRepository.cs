@@ -12,7 +12,7 @@ namespace ClientWebApp.Repository
         //  static string currentPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         //  static string parentPath = Path.GetFullPath(Path.Combine(currentPath, "..\\..\\.."));
         //  private readonly string ClientConnection = parentPath + @"\clients.db";
-        private readonly string ClientConnection = @"C:\tmp\clients.db";
+        private readonly string ClientConnection = @"C:\Users\Jan\Documents\Visual Studio 2015\Projects\car-rental-.NET-app\CarRentalBackend\ClientWebApp\ClientWebApp\clients.db";
         public List<Client> GetAll()
         {
             using (var db = new LiteDatabase(ClientConnection))
