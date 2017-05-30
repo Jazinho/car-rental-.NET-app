@@ -32,34 +32,48 @@ namespace CarWebApp.Controllers
         [EnableQuery]
         public IQueryable<Car> Get()
         {
+            //   Logger logger = new Logger(Logger.State.INFO);
+            WebApiConfig.Logger.info("CarsController->Get all cars");
             return db.GetAll().AsQueryable<Car>();
         }
 
         [EnableQuery]
         public SingleResult<Car> Get([FromODataUri] int key)
         {
+            WebApiConfig.Logger.info("enter CarsController->Get car with id = "+key.ToString());
             IQueryable<Car> result = db.GetAll().AsQueryable<Car>().Where(p => p.Id == key);
+            WebApiConfig.Logger.info("return from CarsController->Get car with id = " + key.ToString());
             return SingleResult.Create(result);
         }
 
         public async Task<IHttpActionResult> Post(Car car)
         {
+            WebApiConfig.Logger.info("enter CarsController->Post car = " + car.ToString());
             if (!ModelState.IsValid)
             {
+                WebApiConfig.Logger.warning("return from CarsController->Post car = " + car.ToString()+" BAD REQUEST");
+
                 return BadRequest(ModelState);
             }
             db.Create(car);
+            WebApiConfig.Logger.info("return from CarsController->Post car = " + car.ToString());
             return Created(car); //(IHttpActionResult) db.Get(car.Id);
         }
 
         public async Task<IHttpActionResult> Put([FromODataUri] int key, Car update)
         {
+            WebApiConfig.Logger.info("enter CarsController->Put car where id = " + key.ToString());
+
             if (!ModelState.IsValid)
             {
+                WebApiConfig.Logger.warning("return from CarsController->Put car where id = " + key.ToString()+" BAD REQUEST");
+
                 return BadRequest(ModelState);
             }
             if (key != update.Id)
             {
+                WebApiConfig.Logger.warning("return from CarsController->Put car where id = " + key.ToString() + " key != update.Id");
+
                 return BadRequest();
             }
             //db.Entry(update).State = EntityState.Modified;
@@ -72,18 +86,26 @@ namespace CarWebApp.Controllers
             {
                 if (!db.CarExists(key))
                 {
+                    WebApiConfig.Logger.warning("return from CarsController->Put where car doesn't exist");
+
                     return NotFound();
                 }
                 else
                 {
+                    WebApiConfig.Logger.error("exception thrown in CarsController->Put car where id = " + key.ToString());
+
                     throw;
                 }
             }
+            WebApiConfig.Logger.info("return from CarsController->Put car where id = " + key.ToString());
+
             return Updated(update);
         }
 
         public async Task<IHttpActionResult> Delete([FromODataUri] int key)
         {
+            WebApiConfig.Logger.info("enter CarsController->Delete car with id = " + key.ToString());
+
             /*var product = await db.Cars.FindAsync(key);
             if (product == null)
             {
@@ -93,6 +115,8 @@ namespace CarWebApp.Controllers
             await db.SaveChangesAsync();
             return StatusCode(HttpStatusCode.NoContent);*/
             db.Delete(key);
+            WebApiConfig.Logger.info("return from CarsController->Delete car with id = " + key.ToString());
+
             return StatusCode(HttpStatusCode.NoContent);
         }
 
@@ -105,9 +129,13 @@ namespace CarWebApp.Controllers
         }*/
         protected override void Dispose(bool disposing)
         {
+            WebApiConfig.Logger.info("enter CarsController->Dispose with disposing = "+disposing.ToString());
+
             CarContext db = new CarContext(); //UWAGA!!!
             db.Dispose();
             base.Dispose(disposing);
+            WebApiConfig.Logger.info("return from CarsController->Dispose with disposing = " + disposing.ToString());
+
         }
 
 

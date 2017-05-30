@@ -1,4 +1,5 @@
 ﻿using CarWebApp.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,11 @@ namespace CarWebApp
 {
     public static class WebApiConfig
     {
+       public static ServiceReference1.Service1Client Logger = new ServiceReference1.Service1Client();
+        // public static ServiceReference1.IService1 Logger = new ServiceReference1.Service1Client();
         public static void Register(HttpConfiguration config)
         {
+            
             // Web API configuration and services
 
             // Web API routes

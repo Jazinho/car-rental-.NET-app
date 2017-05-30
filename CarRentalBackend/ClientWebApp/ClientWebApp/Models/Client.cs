@@ -12,6 +12,10 @@ namespace ClientWebApp.Models
         public string Surname { get; set; }
         public List<int> RentingHistory;
 
-        public Client() { RentingHistory = new List<int>(); }
+        public Client() {
+            WebApiConfig.Logger.warning("Client Constructor");
+
+            RentingHistory = new List<int>();
+        }
     }
 }

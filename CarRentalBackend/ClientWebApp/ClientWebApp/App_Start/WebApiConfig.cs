@@ -10,8 +10,11 @@ namespace ClientWebApp
 {
     public static class WebApiConfig
     {
+        public static ServiceReference1.Service1Client Logger = new ServiceReference1.Service1Client();
+
         public static void Register(HttpConfiguration config)
         {
+           // Logger.Mode = Logger.State.INFO;
             // Web API configuration and services
 
             // Web API routes

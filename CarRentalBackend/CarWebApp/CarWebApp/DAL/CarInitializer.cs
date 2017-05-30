@@ -10,6 +10,8 @@ namespace CarWebApp.DAL
     {
         protected override void Seed(CarContext context)
         {
+            WebApiConfig.Logger.info("enter CarInitializer->Seed");
+
             var cars = new List<Car>
             {
                 new Car() {Id =1, Price=1000, ProductionYear=2009, PassedKms=200000, Brand="Audi", Type = "Sedan", Model="A5"},
@@ -18,6 +20,7 @@ namespace CarWebApp.DAL
             };
             cars.ForEach(c => context.Cars.Add(c));
             context.SaveChanges();
+            WebApiConfig.Logger.info("return from CarInitializer->Seed");
 
         }
     }
