@@ -2,16 +2,42 @@
 
 import React from 'react';
 
-require('styles//Clients.css');
+require('styles/Clients.css');
+
+let loadingGif = require('../images/loading.gif');
 
 class ClientsComponent extends React.Component {
-  render() {
-    return (
-      <div className="clients-component">
-        <p> Clients Clients CLients </p>
-      </div>
-    );
-  }
+	constructor() {
+		super();
+		this.state = {
+		  clientsList: null
+		};
+	}
+	
+	componentWillMount(){
+		fetch('http://localhost:49642/Clients', {
+		  method: 'GET',
+		  headers: {
+			'Accept': 'application/json'
+		  }
+		})
+		.then((response) => response.json())
+		.then((responseJson) => responseJson.value)
+		.then((list) => this.setState({clientsList: list}));
+	}
+	
+    render() {
+		return (
+			(this.state.clientsList == null) ? <img src={loadingGif} alt='Loading...' /> : 
+				<div className="clients-component"><ul> 
+					{this.state.clientsList.map(client => (
+						<li key={client.Id}> 
+							<p>{client.Name} {client.Surname} </p>
+						</li>
+					))}
+				</ul></div>
+		);
+    }
 }
 
 ClientsComponent.displayName = 'ClientsComponent';

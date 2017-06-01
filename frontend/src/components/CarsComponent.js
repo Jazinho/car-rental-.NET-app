@@ -11,12 +11,11 @@ class CarsComponent extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-		  carsList: []
+		  carsList: null
 		};
 	}
 	
 	componentWillMount(){
-		
 		fetch('http://localhost:49635/Cars', {
 		  method: 'GET',
 		  headers: {
@@ -25,17 +24,31 @@ class CarsComponent extends React.Component {
 		})
 		.then((response) => response.json())
 		.then((responseJson) => responseJson.value)
-		.then((list) => this.setState({list}));
-		
-		console.log(this.state.carsList);
+		.then((list) => this.setState({carsList: list}));
 	}
 	
 	render() {
 		return (
-			!this.state.carsList ? <img src={loadingGif} alt='Loading...' /> : 
+			(this.state.carsList == null) ? <img src={loadingGif} alt='Loading...' /> : 
 				<div className="cars-component"><ul> 
 					{this.state.carsList.map(car => (
-						<li key={car.Id}> {car.Brand} {car.Model} <br/> Type: {car.Type} <br/> Passed Kms: {car.PassedKms} <br/> Production Year: {car.ProductionYear} <br/> <br/> Price: <b>{car.Price}</b></li>
+						<li key={car.Id}> 
+							<p>{car.Brand} {car.Model} </p>
+							<table>							
+								<tr> 
+									<td>Type: </td> <td>{car.Type}</td>
+								</tr>
+								<tr> 
+									<td>Passed Kms:</td> <td>{car.PassedKms}</td>
+								</tr>
+								<tr> 								
+									<td>Production Year:</td> <td>{car.ProductionYear}</td>
+								</tr>
+								<tr> 
+									<td>Price:</td> <td>{car.Price}</td>
+								</tr>
+							</table>
+						</li>
 					))}
 				</ul></div>
 		);
