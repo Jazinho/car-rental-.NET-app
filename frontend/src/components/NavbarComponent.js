@@ -7,30 +7,29 @@ import CarsComponent from './CarsComponent';
 import ClientsComponent from './ClientsComponent';
 import AppComponent from './Main';
 
-
 require('styles//Navbar.css');
 
 class NavbarComponent extends React.Component {
   render() {
     return (
-      <Router>
-        <div className="navbar">
-          <ul>
-            <li>
-              <Link to="/"> Home </Link>
-            </li>
-            <li>
-              <Link to="/cars"> Cars </Link>
-            </li>
-            <li>
-              <Link to="/clients"> Clients </Link>
-            </li>
-          </ul>
-          <Route exact path="/" component={AppComponent} />
-          <Route path="/cars" component={CarsComponent} />
-          <Route path="/clients" component={ClientsComponent} />
-        </div>
-      </Router>
+		  <Router>
+			<div className="navbar">
+			  <ul>
+				<li>
+				  <Link to="/"> Home </Link>
+				</li>
+				<li>
+				  <Link to="/cars"> Cars </Link>
+				</li>
+				<li>
+				  <Link to="/clients"> Clients </Link>
+				</li>
+			  </ul>
+			  <Route exact path="/" component={AppComponent} />
+			  <Route path="/cars" component={CarsComponent} />
+			  <Route path="/clients" component={ClientsComponent} />
+			</div>
+		  </Router>
     );
   }
 }

@@ -2,47 +2,44 @@
 
 import React from 'react';
 
-require('styles//Cars.css');
+require('styles/Cars.css');
+
+let loadingGif = require('../images/loading.gif');
 
 class CarsComponent extends React.Component {
 	
+	constructor() {
+		super();
+		this.state = {
+		  carsList: []
+		};
+	}
 	
-  render() {
-	  /*
-	  var myHeaders = new Headers();
-	  myHeaders.append('Access-Control-Allow-Origin', '*');
-	  myHeaders.append('Accept', 'application/json');
-	  
-	var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default'};
-
-	console.log('autka');
-	var cars = fetch('http://localhost:49635/Cars', myInit).then(function(response) {
-	  console.log(response.json());
-	  return response.json();
-	});
-	*/
-	var cars;
-	fetch('http://localhost:49635/Cars', {
-	  method: 'GET',
-	  headers: {
-		'Accept': 'application/json'/*,
-		'Access-Control-Allow-Origin': '*',
-		'mode': 'no-cors'*/
-	  }
-	})
-	.then((response) => response.json())
-	.then((responseJson) => { cars = responseJson.value; console.log(cars); })
+	componentWillMount(){
+		
+		fetch('http://localhost:49635/Cars', {
+		  method: 'GET',
+		  headers: {
+			'Accept': 'application/json'
+		  }
+		})
+		.then((response) => response.json())
+		.then((responseJson) => responseJson.value)
+		.then((list) => this.setState({list}));
+		
+		console.log(this.state.carsList);
+	}
 	
-
-    return (
-      <div className="cars-component">
-        <p>Cars Cars Cars</p>
-      </div>
-    );
-  }
+	render() {
+		return (
+			!this.state.carsList ? <img src={loadingGif} alt='Loading...' /> : 
+				<div className="cars-component"><ul> 
+					{this.state.carsList.map(car => (
+						<li key={car.Id}> {car.Brand} {car.Model} <br/> Type: {car.Type} <br/> Passed Kms: {car.PassedKms} <br/> Production Year: {car.ProductionYear} <br/> <br/> Price: <b>{car.Price}</b></li>
+					))}
+				</ul></div>
+		);
+    }
 }
 
 CarsComponent.displayName = 'CarsComponent';
