@@ -1,0 +1,283 @@
+info (7:05:19 ): enter CarContext constructor
+info (7:05:19 ): return from CarContext constructor
+info (7:05:19 ): CarsController->Get all cars
+info (7:05:19 ): CarRepository->GetAll
+info (7:05:19 ): enter CarsController->Dispose with disposing = True
+info (7:05:20 ): enter CarContext constructor
+info (7:05:20 ): return from CarContext constructor
+info (7:05:20 ): return from CarsController->Dispose with disposing = True
+info (7:05:51 ): enter CarContext constructor
+info (7:05:51 ): return from CarContext constructor
+info (7:05:51 ): CarsController->Get all cars
+info (7:05:51 ): CarRepository->GetAll
+info (7:05:51 ): enter CarsController->Dispose with disposing = True
+info (7:05:51 ): enter CarContext constructor
+info (7:05:51 ): return from CarContext constructor
+info (7:05:51 ): return from CarsController->Dispose with disposing = True
+info (7:06:35 ): enter CarContext constructor
+info (7:06:35 ): return from CarContext constructor
+info (7:06:35 ): CarsController->Get all cars
+info (7:06:35 ): CarRepository->GetAll
+info (7:06:35 ): enter CarsController->Dispose with disposing = True
+info (7:06:35 ): enter CarContext constructor
+info (7:06:35 ): return from CarContext constructor
+info (7:06:35 ): return from CarsController->Dispose with disposing = True
+info (7:13:31 ): enter CarContext constructor
+info (7:13:31 ): return from CarContext constructor
+info (7:13:31 ): CarsController->Get all cars
+info (7:13:31 ): CarRepository->GetAll
+info (7:13:31 ): enter CarsController->Dispose with disposing = True
+info (7:13:31 ): enter CarContext constructor
+info (7:13:31 ): return from CarContext constructor
+info (7:13:31 ): return from CarsController->Dispose with disposing = True
+info (7:13:48 ): enter CarContext constructor
+info (7:13:48 ): return from CarContext constructor
+info (7:13:48 ): CarsController->Get all cars
+info (7:13:48 ): CarRepository->GetAll
+info (7:13:48 ): enter CarsController->Dispose with disposing = True
+info (7:13:48 ): enter CarContext constructor
+info (7:13:48 ): return from CarContext constructor
+info (7:13:48 ): return from CarsController->Dispose with disposing = True
+info (7:14:15 ): enter CarContext constructor
+info (7:14:15 ): return from CarContext constructor
+info (7:14:15 ): CarsController->Get all cars
+info (7:14:15 ): CarRepository->GetAll
+info (7:14:15 ): enter CarsController->Dispose with disposing = True
+info (7:14:15 ): enter CarContext constructor
+info (7:14:15 ): return from CarContext constructor
+info (7:14:15 ): return from CarsController->Dispose with disposing = True
+info (7:15:37 ): enter CarContext constructor
+info (7:15:37 ): return from CarContext constructor
+info (7:15:37 ): CarsController->Get all cars
+info (7:15:37 ): CarRepository->GetAll
+info (7:15:37 ): enter CarsController->Dispose with disposing = True
+info (7:15:37 ): enter CarContext constructor
+info (7:15:37 ): return from CarContext constructor
+info (7:15:37 ): return from CarsController->Dispose with disposing = True
+info (7:18:34 ): enter CarContext constructor
+info (7:18:34 ): return from CarContext constructor
+info (7:18:34 ): CarsController->Get all cars
+info (7:18:34 ): CarRepository->GetAll
+info (7:18:34 ): enter CarsController->Dispose with disposing = True
+info (7:18:34 ): enter CarContext constructor
+info (7:18:34 ): return from CarContext constructor
+info (7:18:34 ): return from CarsController->Dispose with disposing = True
+info (7:19:24 ): enter CarContext constructor
+info (7:19:24 ): return from CarContext constructor
+info (7:19:24 ): CarsController->Get all cars
+info (7:19:25 ): CarRepository->GetAll
+info (7:19:25 ): enter CarsController->Dispose with disposing = True
+info (7:19:25 ): enter CarContext constructor
+info (7:19:25 ): return from CarContext constructor
+info (7:19:25 ): return from CarsController->Dispose with disposing = True
+info (7:19:34 ): enter CarContext constructor
+info (7:19:34 ): return from CarContext constructor
+info (7:19:34 ): CarsController->Get all cars
+info (7:19:34 ): CarRepository->GetAll
+info (7:19:34 ): enter CarsController->Dispose with disposing = True
+info (7:19:34 ): enter CarContext constructor
+info (7:19:34 ): return from CarContext constructor
+info (7:19:34 ): return from CarsController->Dispose with disposing = True
+info (7:23:52 ): enter CarContext constructor
+info (7:23:52 ): return from CarContext constructor
+info (7:23:52 ): CarsController->Get all cars
+info (7:23:52 ): CarRepository->GetAll
+info (7:23:52 ): enter CarsController->Dispose with disposing = True
+info (7:23:52 ): enter CarContext constructor
+info (7:23:52 ): return from CarContext constructor
+info (7:23:52 ): return from CarsController->Dispose with disposing = True
+info (7:24:29 ): enter CarContext constructor
+info (7:24:29 ): return from CarContext constructor
+info (7:24:29 ): CarsController->Get all cars
+info (7:24:29 ): CarRepository->GetAll
+info (7:24:29 ): enter CarsController->Dispose with disposing = True
+info (7:24:29 ): enter CarContext constructor
+info (7:24:29 ): return from CarContext constructor
+info (7:24:29 ): return from CarsController->Dispose with disposing = True
+info (7:24:41 ): enter CarContext constructor
+info (7:24:41 ): return from CarContext constructor
+info (7:24:41 ): CarsController->Get all cars
+info (7:24:41 ): CarRepository->GetAll
+info (7:24:41 ): enter CarsController->Dispose with disposing = True
+info (7:24:41 ): enter CarContext constructor
+info (7:24:41 ): return from CarContext constructor
+info (7:24:41 ): return from CarsController->Dispose with disposing = True
+info (7:24:55 ): enter CarContext constructor
+info (7:24:55 ): return from CarContext constructor
+info (7:24:55 ): CarsController->Get all cars
+info (7:24:55 ): CarRepository->GetAll
+info (7:24:55 ): enter CarsController->Dispose with disposing = True
+info (7:24:55 ): enter CarContext constructor
+info (7:24:55 ): return from CarContext constructor
+info (7:24:55 ): return from CarsController->Dispose with disposing = True
+info (7:25:00 ): enter CarContext constructor
+info (7:25:00 ): return from CarContext constructor
+info (7:25:00 ): CarsController->Get all cars
+info (7:25:00 ): CarRepository->GetAll
+info (7:25:00 ): enter CarsController->Dispose with disposing = True
+info (7:25:00 ): enter CarContext constructor
+info (7:25:00 ): return from CarContext constructor
+info (7:25:00 ): return from CarsController->Dispose with disposing = True
+info (7:27:58 ): enter CarContext constructor
+info (7:27:58 ): return from CarContext constructor
+info (7:27:58 ): CarsController->Get all cars
+info (7:27:58 ): CarRepository->GetAll
+info (7:27:58 ): enter CarsController->Dispose with disposing = True
+info (7:27:58 ): enter CarContext constructor
+info (7:27:58 ): return from CarContext constructor
+info (7:27:58 ): return from CarsController->Dispose with disposing = True
+info (7:28:55 ): enter CarContext constructor
+info (7:28:55 ): return from CarContext constructor
+info (7:28:55 ): CarsController->Get all cars
+info (7:28:55 ): CarRepository->GetAll
+info (7:28:55 ): enter CarsController->Dispose with disposing = True
+info (7:28:55 ): enter CarContext constructor
+info (7:28:55 ): return from CarContext constructor
+info (7:28:55 ): return from CarsController->Dispose with disposing = True
+info (7:28:57 ): ClientsController->Get all clients
+info (7:28:57 ): enter ClientsController->GetAll
+info (7:28:57 ): return from ClientsController->GetAll
+info (7:28:57 ): enter ClientsController->Map with id = 1
+info (7:28:57 ): return from ClientsController->Map with id = 1
+info (7:28:57 ): enter ClientsController->Map with id = 2
+info (7:28:57 ): return from ClientsController->Map with id = 2
+info (7:28:57 ): enter ClientsController->Map with id = 3
+info (7:28:57 ): return from ClientsController->Map with id = 3
+info (7:28:57 ): enter ClientsController->Map with id = 4
+info (7:28:57 ): return from ClientsController->Map with id = 4
+info (7:29:19 ): ClientsController->Get all clients
+info (7:29:19 ): enter ClientsController->GetAll
+info (7:29:19 ): return from ClientsController->GetAll
+info (7:29:19 ): enter ClientsController->Map with id = 1
+info (7:29:19 ): return from ClientsController->Map with id = 1
+info (7:29:19 ): enter ClientsController->Map with id = 2
+info (7:29:19 ): return from ClientsController->Map with id = 2
+info (7:29:19 ): enter ClientsController->Map with id = 3
+info (7:29:19 ): return from ClientsController->Map with id = 3
+info (7:29:19 ): enter ClientsController->Map with id = 4
+info (7:29:19 ): return from ClientsController->Map with id = 4
+info (7:29:20 ): enter CarContext constructor
+info (7:29:20 ): return from CarContext constructor
+info (7:29:20 ): CarsController->Get all cars
+info (7:29:20 ): CarRepository->GetAll
+info (7:29:20 ): enter CarsController->Dispose with disposing = True
+info (7:29:20 ): enter CarContext constructor
+info (7:29:20 ): return from CarContext constructor
+info (7:29:20 ): return from CarsController->Dispose with disposing = True
+info (7:34:49 ): enter CarContext constructor
+info (7:34:49 ): return from CarContext constructor
+info (7:34:49 ): CarsController->Get all cars
+info (7:34:49 ): CarRepository->GetAll
+info (7:34:49 ): enter CarsController->Dispose with disposing = True
+info (7:34:49 ): enter CarContext constructor
+info (7:34:49 ): return from CarContext constructor
+info (7:34:49 ): return from CarsController->Dispose with disposing = True
+info (7:34:52 ): ClientsController->Get all clients
+info (7:34:52 ): enter ClientsController->GetAll
+info (7:34:52 ): return from ClientsController->GetAll
+info (7:34:52 ): enter ClientsController->Map with id = 1
+info (7:34:52 ): return from ClientsController->Map with id = 1
+info (7:34:52 ): enter ClientsController->Map with id = 2
+info (7:34:52 ): return from ClientsController->Map with id = 2
+info (7:34:52 ): enter ClientsController->Map with id = 3
+info (7:34:52 ): return from ClientsController->Map with id = 3
+info (7:34:52 ): enter ClientsController->Map with id = 4
+info (7:34:52 ): return from ClientsController->Map with id = 4
+info (7:35:08 ): enter CarContext constructor
+info (7:35:08 ): return from CarContext constructor
+info (7:35:08 ): CarsController->Get all cars
+info (7:35:08 ): CarRepository->GetAll
+info (7:35:08 ): enter CarsController->Dispose with disposing = True
+info (7:35:08 ): enter CarContext constructor
+info (7:35:08 ): return from CarContext constructor
+info (7:35:08 ): return from CarsController->Dispose with disposing = True
+info (7:35:13 ): enter CarContext constructor
+info (7:35:13 ): return from CarContext constructor
+info (7:35:13 ): CarsController->Get all cars
+info (7:35:13 ): CarRepository->GetAll
+info (7:35:13 ): enter CarsController->Dispose with disposing = True
+info (7:35:13 ): enter CarContext constructor
+info (7:35:13 ): return from CarContext constructor
+info (7:35:13 ): return from CarsController->Dispose with disposing = True
+info (7:35:15 ): ClientsController->Get all clients
+info (7:35:15 ): enter ClientsController->GetAll
+info (7:35:15 ): return from ClientsController->GetAll
+info (7:35:15 ): enter ClientsController->Map with id = 1
+info (7:35:15 ): return from ClientsController->Map with id = 1
+info (7:35:15 ): enter ClientsController->Map with id = 2
+info (7:35:16 ): return from ClientsController->Map with id = 2
+info (7:35:16 ): enter ClientsController->Map with id = 3
+info (7:35:16 ): return from ClientsController->Map with id = 3
+info (7:35:16 ): enter ClientsController->Map with id = 4
+info (7:35:16 ): return from ClientsController->Map with id = 4
+info (7:35:47 ): ClientsController->Get all clients
+info (7:35:47 ): enter ClientsController->GetAll
+info (7:35:47 ): return from ClientsController->GetAll
+info (7:35:47 ): enter ClientsController->Map with id = 1
+info (7:35:47 ): return from ClientsController->Map with id = 1
+info (7:35:47 ): enter ClientsController->Map with id = 2
+info (7:35:47 ): return from ClientsController->Map with id = 2
+info (7:35:47 ): enter ClientsController->Map with id = 3
+info (7:35:47 ): return from ClientsController->Map with id = 3
+info (7:35:47 ): enter ClientsController->Map with id = 4
+info (7:35:47 ): return from ClientsController->Map with id = 4
+info (7:35:50 ): enter CarContext constructor
+info (7:35:50 ): return from CarContext constructor
+info (7:35:50 ): CarsController->Get all cars
+info (7:35:50 ): CarRepository->GetAll
+info (7:35:50 ): enter CarsController->Dispose with disposing = True
+info (7:35:50 ): enter CarContext constructor
+info (7:35:50 ): return from CarContext constructor
+info (7:35:50 ): return from CarsController->Dispose with disposing = True
+info (7:35:51 ): ClientsController->Get all clients
+info (7:35:51 ): enter ClientsController->GetAll
+info (7:35:51 ): return from ClientsController->GetAll
+info (7:35:51 ): enter ClientsController->Map with id = 1
+info (7:35:51 ): return from ClientsController->Map with id = 1
+info (7:35:51 ): enter ClientsController->Map with id = 2
+info (7:35:51 ): return from ClientsController->Map with id = 2
+info (7:35:51 ): enter ClientsController->Map with id = 3
+info (7:35:51 ): return from ClientsController->Map with id = 3
+info (7:35:51 ): enter ClientsController->Map with id = 4
+info (7:35:51 ): return from ClientsController->Map with id = 4
+info (7:35:52 ): enter CarContext constructor
+info (7:35:52 ): return from CarContext constructor
+info (7:35:52 ): CarsController->Get all cars
+info (7:35:52 ): CarRepository->GetAll
+info (7:35:52 ): enter CarsController->Dispose with disposing = True
+info (7:35:52 ): enter CarContext constructor
+info (7:35:52 ): return from CarContext constructor
+info (7:35:52 ): return from CarsController->Dispose with disposing = True
+info (9:27:06 ): ClientsController->Get all clients
+info (9:27:06 ): enter ClientsController->GetAll
+info (9:27:06 ): return from ClientsController->GetAll
+info (9:27:06 ): enter ClientsController->Map with id = 1
+info (9:27:06 ): return from ClientsController->Map with id = 1
+info (9:27:06 ): enter ClientsController->Map with id = 2
+info (9:27:06 ): return from ClientsController->Map with id = 2
+info (9:27:06 ): enter ClientsController->Map with id = 3
+info (9:27:06 ): return from ClientsController->Map with id = 3
+info (9:27:06 ): enter ClientsController->Map with id = 4
+info (9:27:06 ): return from ClientsController->Map with id = 4
+info (9:46:00 ): ClientsController->Get all clients
+info (9:46:00 ): enter ClientsController->GetAll
+info (9:46:00 ): return from ClientsController->GetAll
+info (9:46:00 ): enter ClientsController->Map with id = 1
+info (9:46:00 ): return from ClientsController->Map with id = 1
+info (9:46:00 ): enter ClientsController->Map with id = 2
+info (9:46:00 ): return from ClientsController->Map with id = 2
+info (9:46:00 ): enter ClientsController->Map with id = 3
+info (9:46:00 ): return from ClientsController->Map with id = 3
+info (9:46:00 ): enter ClientsController->Map with id = 4
+info (9:46:00 ): return from ClientsController->Map with id = 4
+info (9:46:04 ): ClientsController->Get all clients
+info (9:46:04 ): enter ClientsController->GetAll
+info (9:46:04 ): return from ClientsController->GetAll
+info (9:46:04 ): enter ClientsController->Map with id = 1
+info (9:46:04 ): return from ClientsController->Map with id = 1
+info (9:46:04 ): enter ClientsController->Map with id = 2
+info (9:46:04 ): return from ClientsController->Map with id = 2
+info (9:46:04 ): enter ClientsController->Map with id = 3
+info (9:46:04 ): return from ClientsController->Map with id = 3
+info (9:46:04 ): enter ClientsController->Map with id = 4
+info (9:46:04 ): return from ClientsController->Map with id = 4
