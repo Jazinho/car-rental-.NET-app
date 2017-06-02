@@ -1,7 +1,3 @@
-.navbar-component {
-  border: 1px dashed #f00;
-}
-
 ul {
     list-style-type: none;
     margin: 10px;
@@ -15,3 +11,17 @@ li {
     padding: 50px;
     font-weight: bold;
 }
+
+.logform-component {
+  margin-top:100px;
+}
+
+.buttons{
+	display: inline;
+}
+
+button{
+	margin-right:10px;
+	margin-left:10px;
+}
+

@@ -28,14 +28,16 @@ class ClientsComponent extends React.Component {
 	
     render() {
 		return (
-			(this.state.clientsList == null) ? <img src={loadingGif} alt='Loading...' /> : 
-				<div className="clients-component"><ul> 
-					{this.state.clientsList.map(client => (
-						<li key={client.Id}> 
-							<p>{client.Name} {client.Surname} </p>
-						</li>
-					))}
-				</ul></div>
+			this.props.isAuth == 'true' ?
+				(this.state.clientsList == null) ? <img src={loadingGif} alt='Loading...' /> : 
+					<div className="clients-component"><ul> 
+						{this.state.clientsList.map(client => (
+							<li key={client.Id}> 
+								<p>{client.Name} {client.Surname} </p>
+							</li>
+						))}
+					</ul></div> :
+			 <div> PERMISSION DENIED </div>
 		);
     }
 }
