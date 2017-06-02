@@ -11,7 +11,7 @@ namespace WcfLogger
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single)]
     public class Service1 : IService1
     {
-        public static string path = "C:\\Users\\user\\Desktop\\ceplotkopia\\car-rental-.NET-app\\CarRentalBackend\\log" + Guid.NewGuid().ToString("N") + ".txt";
+        public static string path = "C:\\Users\\Jan\\Documents\\Visual Studio 2015\\Projects\\car-rental-.NET-app\\CarRentalBackend\\log" + Guid.NewGuid().ToString("N") + ".txt";
 
         private static System.IO.StreamWriter file = new System.IO.StreamWriter(path);
 
