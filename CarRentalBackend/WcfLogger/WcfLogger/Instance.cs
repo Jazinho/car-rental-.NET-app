@@ -8,9 +8,20 @@ namespace WcfLogger
 {
    public static class Instance
     {
-        public Service1 getLogger()
+        public static Service1 Logger
         {
-            Service1 Logger = new Service1();
+            get
+            {
+                if (Logger == null)
+                    Logger = new Service1();
+
+                return Logger;
+            }
+
+            private set
+            {
+
+            }
         }
     }
 }
