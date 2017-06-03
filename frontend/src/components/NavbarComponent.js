@@ -14,7 +14,8 @@ class NavbarComponent extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			isAuth: 'false'
+			isAuth: 'false',
+			message: ''
 		};
 	}
 	
@@ -23,8 +24,8 @@ class NavbarComponent extends React.Component {
 		var pass = document.getElementById('pass').value;
 		
 		var params = {
-			username: 'Jazinho',
-			password: 'SuperPass',
+			username: login,
+			password: pass,
 			grant_type: 'password'
 		};
 
@@ -32,9 +33,9 @@ class NavbarComponent extends React.Component {
 		for (var property in params) {
 			var encodedKey = encodeURIComponent(property);
 			var encodedValue = encodeURIComponent(params[property]);
-			formBody.push(encodedKey + "=" + encodedValue);
+			formBody.push(encodedKey + '=' + encodedValue);
 		}
-		formBody = formBody.join("&");
+		formBody = formBody.join('&');
 
 		fetch('http://localhost:49791/token', {
 		  method: 'POST',
@@ -49,17 +50,42 @@ class NavbarComponent extends React.Component {
 			if(json.hasOwnProperty('access_token')){
 				this.setState({isAuth: 'true'});
 			}
+			if(json.hasOwnProperty('error')){
+				this.setState({message: 'Invalid username or password'});
+			}
 		});
 	}
   
 	register(){
+		var login = document.getElementById('login').value;
+		var pass = document.getElementById('pass').value;
 		
+		if(pass.length > 5){
+
+			fetch('http://localhost:49791/api/account/register', {
+			  method: 'POST',
+			  headers: {
+				'Content-Type': 'application/json'
+			  },
+			  body: JSON.stringify({username: login, password: pass, confirmPassword: pass})
+			});		
+			this.setState({message: 'Successfully registered user' + login});
+		}else{
+			this.setState({message: 'Password must be at least 6 characters long'});
+		}
 	}
 	
   render() {
     return (
 		this.state.isAuth == 'false' ?
 			<div className="logform-component">
+				<div className="quote">
+					"The best cars in the universe. I truly recomend" ~ Tom Hanks <br/> <br/>
+					"Najszybsze auta w Polsce" ~ Antoni Macierewicz
+				</div>
+				<div className="message">
+					{this.state.message}
+				</div> <br/> <br/>
 				<div>
 					<label><b>Login</b></label><br/>
 					<input type="text" id="login" /><br/><br/>

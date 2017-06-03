@@ -25,3 +25,12 @@ button{
 	margin-left:10px;
 }
 
+.quote{
+	font-style: italic;
+	margin-bottom: 70px;
+}
+
+.message{
+	color: red;
+}
+
