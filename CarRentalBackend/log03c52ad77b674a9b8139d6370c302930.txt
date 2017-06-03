@@ -1,0 +1,18 @@
+info (5:41:32 ): enter CarContext constructor
+info (5:41:32 ): return from CarContext constructor
+info (5:41:32 ): CarsController->Get all cars
+info (5:41:32 ): CarRepository->GetAll
+info (5:41:32 ): enter CarContext->OnModelCreating
+info (5:41:32 ): return from CarContext->OnModelCreating
+info (5:41:37 ): enter CarsController->Dispose with disposing = True
+info (5:41:37 ): enter CarContext constructor
+info (5:41:37 ): return from CarContext constructor
+info (5:41:37 ): return from CarsController->Dispose with disposing = True
+info (5:41:41 ): enter CarContext constructor
+info (5:41:41 ): return from CarContext constructor
+info (5:41:42 ): CarsController->Get all cars
+info (5:41:42 ): CarRepository->GetAll
+info (5:41:42 ): enter CarsController->Dispose with disposing = True
+info (5:41:42 ): enter CarContext constructor
+info (5:41:42 ): return from CarContext constructor
+info (5:41:42 ): return from CarsController->Dispose with disposing = True
