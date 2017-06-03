@@ -1,5 +1,6 @@
 ﻿using Authorization.Providers;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using System;
@@ -15,12 +16,14 @@ namespace Authorization
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseCors(CorsOptions.AllowAll);
+
             HttpConfiguration config = new HttpConfiguration();
 
             ConfigureOAuth(app);
 
             WebApiConfig.Register(config);
-            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+            
             app.UseWebApi(config);
         }
 
