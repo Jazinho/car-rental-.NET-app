@@ -23,16 +23,18 @@ class NavbarComponent extends React.Component {
 		var pass = document.getElementById('pass').value;
 		
 		var params = {
-			userName: login,
-			password: pass,
+			username: 'Jazinho',
+			password: 'SuperPass',
 			grant_type: 'password'
 		};
-		
-		var formData = new FormData();
 
-		for (var k in params) {
-			formData.append(k, params[k]);
+		var formBody = [];
+		for (var property in params) {
+			var encodedKey = encodeURIComponent(property);
+			var encodedValue = encodeURIComponent(params[property]);
+			formBody.push(encodedKey + "=" + encodedValue);
 		}
+		formBody = formBody.join("&");
 
 		fetch('http://localhost:49791/token', {
 		  method: 'POST',
@@ -40,36 +42,36 @@ class NavbarComponent extends React.Component {
 			'Accept': 'application/json',
 			'Content-Type': 'x-www-form-urlencoded'
 		  },
-		  body: formData
+		  body: formBody
 		})
-		.then((response) => response.json().access_token)
-		.then((token) => this.setState({isAuth: 'true'})); //
-		
-		//;
-		
+		.then(response => response.json())
+		.then(json => {
+			if(json.hasOwnProperty('access_token')){
+				this.setState({isAuth: 'true'});
+			}
+		});
 	}
   
 	register(){
 		
 	}
 	
-	
   render() {
     return (
 		this.state.isAuth == 'false' ?
 			<div className="logform-component">
-				<form>
+				<div>
 					<label><b>Login</b></label><br/>
-					<input type="text" name="login" /><br/><br/>
+					<input type="text" id="login" /><br/><br/>
 					
 					<label><b>Password</b></label><br/>
-					<input type="password" name="pass" /><br/><br/>
+					<input type="password" id="pass" /><br/><br/>
 					
-					<div class="buttons"> 
+					<div className="buttons"> 
 						<button onClick={this.log.bind(this)}> Login </button>
 						<button onClick={this.register.bind(this)}> Register </button>
 					</div>
-				</form>
+				</div>
 			</div> :		
 			<Router>
 				<div className="navbar">
